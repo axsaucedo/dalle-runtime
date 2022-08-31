@@ -1,0 +1,9 @@
+{
+    "name": "test-model",
+    "implementation": "dalle_runtime.DalleRuntime",
+    "parameters": {
+        "extra": {
+            "lambda_value": "lambda x: sum(x)"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+# local package
+-e .
+
+# Download resources
+wandb
+
+# external requirements
+click
+Sphinx
+coverage
+flake8
+
+# Security
+safety
+piprot
+bandit

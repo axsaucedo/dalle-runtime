@@ -1,0 +1,4 @@
+name: cuda-env
+dependencies:
+- cudatoolkit=11.6
+- cudnn=8.2
