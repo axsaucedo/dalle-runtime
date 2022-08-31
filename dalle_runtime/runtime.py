@@ -10,7 +10,7 @@ from mlserver.codecs.string import StringRequestCodec
 from dalle_runtime.common import DalleRuntimeSettings, dalle_text_to_image
 
 class DalleRuntime(MLModel):
-    """Runtime class for specific Huggingface models"""
+    """Runtime class for specific DALLE models"""
 
     def __init__(self, settings: ModelSettings):
 
@@ -29,7 +29,6 @@ class DalleRuntime(MLModel):
         encoded_outputs = []
         for instance in model_input:
             model_output = dalle_text_to_image(instance, seed)
-            print(f"{model_output.shape}, {model_output.dtype}")
             encoded_output = NumpyCodec.encode("predict", model_output)
             encoded_outputs.append(encoded_output)
 
