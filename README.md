@@ -1,6 +1,10 @@
 # Dalle Runtime
 
-Runtime for Dalle model
+Runtime for Dalle model.
+
+## Sample
+
+You can check out the sample showing the GPT2->DALL-E pipeline under `/docs/examples/`.
 
 ## Usage
 
