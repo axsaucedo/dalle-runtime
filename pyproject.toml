@@ -1,18 +1,20 @@
 [tool.poetry]
-name = "Dalle Runtime"
+name = "dalle-runtime"
 version = "0.1.0"
-description = "Runtime for Dalle model"
-authors = ["axsaucedo"]
+description = "Runtime for Dalle model\""
+authors = ["Alejandro Saucedo <axsauze@gmail.com>"]
 license = "MIT"
+readme = "README.md"
+packages = [{include = "dalle_runtime"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 mlserver = "1.1.0"
-fastapi = "^0.78"
+fastapi = "0.68.2"
 # TODO: Allow for gpu vs cpu
-torch = "^1.12.0+cu116"
-jaxlib = "^0.3.14+cuda11.cudnn82"
-
+# TODO: Currently not using source as poetry (as of 1.2) downloads all artifacts
+torch = { url = "https://download.pytorch.org/whl/cu116/torch-1.12.0%2Bcu116-cp38-cp38-linux_x86_64.whl" }
+jaxlib = { url = "https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.14+cuda11.cudnn82-cp38-none-manylinux2014_x86_64.whl" }
 
 [tool.poetry.dev-dependencies]
 Sphinx = "3.2.1"
@@ -23,7 +25,7 @@ safety = "1.10.3"
 piprot = "0.9.11"
 bandit = "1.7.4"
 
-
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
