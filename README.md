@@ -2,11 +2,11 @@
 
 Runtime for Dalle model.
 
-## Sample
+## Example
 
-You can check out the sample showing the GPT2->DALL-E pipeline under `/docs/examples/`.
+Once you follow the setup below you can checkout the example showing the GPT2->DALL-E pipeline under `/docs/examples/README`.
 
-## Usage
+## Setup
 
 You can get started by installing the environment with the following commands.
 
@@ -17,27 +17,29 @@ Make sure you have all dependencies set up as outlined in the Dependencies secti
 make conda-env-create
 conda activate dalle_runtime
 
-make install
+make install-dev # or make install for prod
 ```
 
-Once you have set up you will have a `poetry.lock` file with all the dependencies for full reproducibility.
+## Downloading models
+
+You can download the models using the makefile command:
+
+```bash
+make local-download-resources
+```
+
+## Running the server
 
 You can then run the server locally for a test with the following command:
 
 ```
-make local-run
+make local-start
 ```
 
 And then you can send a test request to your deployed ML model runtime with the following command:
 
 ```
 make local-test-request
-```
-
-Finally we can just stop the mlserver process:
-
-```
-make local-stop
 ```
 
 ## Security
