@@ -1,4 +1,10 @@
-name: cuda-env
+name: dalle_runtime
+channels:
+- conda-forge
 dependencies:
-- cudatoolkit=11.6
-- cudnn=8.2
+- python=3.8
+- cudatoolkit=11.6.0
+- cudnn=8.2.0
+- pip=22.3.1
+- pip:
+  - poetry==1.2.2
