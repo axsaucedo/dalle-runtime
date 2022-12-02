@@ -1,6 +1,6 @@
-# Dalle Runtime
+# Dalle Runtime 🤖
 
-Runtime for Dalle model.
+ML Server Runtime for "Industry Strength DALL-E Talk". Contains example loading gpt2 and Dalle models.
 
 ## Example
 
