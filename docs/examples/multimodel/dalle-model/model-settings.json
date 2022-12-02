@@ -1,4 +1,4 @@
 {
-    "name": "test-model",
+    "name": "dalle-model",
     "implementation": "dalle_runtime.DalleRuntime"
 }

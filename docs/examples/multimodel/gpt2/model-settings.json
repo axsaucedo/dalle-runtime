@@ -1,5 +1,5 @@
 {
-    "name": "transformer",
+    "name": "gpt2",
     "implementation": "mlserver_huggingface.HuggingFaceRuntime",
     "parallel_workers": 0,
     "parameters": {

@@ -52,7 +52,7 @@ local-download-resources:
 	wandb artifact get --root=./dalle_runtime/min-dalle/pretrained/dalle_bart_mini dalle-mini/dalle-mini/mini-1:v0
 
 local-test-request:
-	curl http://localhost:8080/v2/models/transformer/infer \
+	curl http://localhost:8080/v2/models/gpt2/infer \
 		-H "Content-Type: application/json" \
 		-d '{"inputs":[{"name":"text_inputs","shape":[1],"datatype":"BYTES","data":["Cookies"]}]}'
 
